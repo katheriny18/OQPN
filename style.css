@@ -1,66 +1,84 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { background: #050b1a; font-family: 'Poppins', sans-serif; }
+body {
+  background: #050b1a;
+  font-family: 'Poppins', sans-serif;
+  padding: 16px; /* cria a margem descolada */
+}
 
 #capa {
-  height: 100vh;
+  height: calc(100vh - 32px); /* deixa espaço da margem */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* AQUI ESTÁ O FUNDO DA FLORESTA */
+  position: relative;
+  border-radius: 28px; /* borda arredondada */
+  overflow: hidden;
+  background-color: #050b1a;
+}
+
+/* IMAGEM COM FILTRO PRA NÃO ESTOURAR */
+#capa::after {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image: url('fundo.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  filter: brightness(0.5) saturate(0.65) contrast(1.1) blur(0.5px);
 }
 
-/* escurece um pouco a imagem pra o texto aparecer */
+/* película escura pra controlar o azul */
 #capa::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(5,11,26,0.6));
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5,11,26,0.2), rgba(5,11,26,0.6));
+  z-index: 2;
 }
 
+/* SEM QUADRADO AGORA */
 .conteudo {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   color: white;
-  padding: 32px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(15px);
-  border-radius: 24px;
-  border: 1px solid rgba(255,255,255,0.2);
-  max-width: 380px;
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  padding: 0;
 }
 
 .sub {
-  font-size: 9px;
-  letter-spacing: 5px;
+  font-size: 10px;
+  letter-spacing: 6px;
   color: #7de2ff;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
 h1 {
   font-family: 'Instrument Serif', serif;
-  font-size: 64px;
-  line-height: 0.9;
+  font-size: 76px;
+  line-height: 0.85;
   font-weight: 400;
-  margin-bottom: 20px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.9);
 }
 
 h1 i {
-  color: #7de2ff;
+  color: #b0f0ff;
   font-style: italic;
   display: block;
+  font-weight: 300;
 }
 
 .frase {
-  font-size: 11px;
+  margin-top: 20px;
+  font-size: 12px;
   font-style: italic;
-  opacity: 0.8;
-  line-height: 1.5;
+  opacity: 0.75;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
 }
