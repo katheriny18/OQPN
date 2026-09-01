@@ -1,5 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #050b1a; }
+
+body { background: #050b1a; font-family: 'Poppins', sans-serif; }
 
 #capa {
   height: 100vh;
@@ -7,16 +8,20 @@ body { background: #050b1a; }
   display: flex;
   justify-content: center;
   align-items: center;
+  /* AQUI ESTÁ O FUNDO DA FLORESTA */
+  background-image: url('fundo.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
-  background: url('fundo.jpeg') center / cover no-repeat;
-  overflow: hidden;
 }
 
+/* escurece um pouco a imagem pra o texto aparecer */
 #capa::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(5,11,26,0.2), rgba(5,11,26,0.7));
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(5,11,26,0.6));
 }
 
 .conteudo {
@@ -24,29 +29,19 @@ body { background: #050b1a; }
   z-index: 2;
   text-align: center;
   color: white;
-  padding: 30px;
-  background: rgba(8, 18, 38, 0.35);
-  backdrop-filter: blur(12px);
+  padding: 32px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
   border-radius: 24px;
-  border: 1px solid rgba(125,226,255,0.2);
-  max-width: 400px;
-}
-
-.frase {
-  font-family: 'Poppins', sans-serif;
-  font-size: 11px;
-  font-style: italic;
-  opacity: 0.8;
-  margin-bottom: 24px;
-  line-height: 1.6;
+  border: 1px solid rgba(255,255,255,0.2);
+  max-width: 380px;
 }
 
 .sub {
-  font-size: 8px;
-  letter-spacing: 6px;
-  opacity: 0.6;
-  margin-bottom: 16px;
+  font-size: 9px;
+  letter-spacing: 5px;
   color: #7de2ff;
+  margin-bottom: 12px;
 }
 
 h1 {
@@ -54,10 +49,18 @@ h1 {
   font-size: 64px;
   line-height: 0.9;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 h1 i {
   color: #7de2ff;
   font-style: italic;
   display: block;
+}
+
+.frase {
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.8;
+  line-height: 1.5;
 }
