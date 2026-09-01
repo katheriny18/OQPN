@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #a5d6a7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameContainer {
+  position: relative;
+  width: 420px;
+  max-width: 95vw;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#topo {
+  background: #1b5e20;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#canvas {
+  display: block;
+  width: 100%;
+  height: 600px;
+  background: #e8f5e9;
+}
+
+#controls {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #c8e6c9;
+}
+
+#controls button {
+  flex: 1;
+  height: 60px;
+  font-size: 28px;
+  border: none;
+  border-radius: 12px;
+  background: #2e7d32;
+  color: white;
+}
+
+/* CAPA - SÓ O QUE VOCÊ MARCOU */
+#capa {
+  position: absolute;
+  inset: 0;
+  background: #eaf6ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  z-index: 10;
+}
+
+#capa h1 {
+  color: #1e4a28;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.sub {
+  margin-top: 12px;
+  background: #2e7d32;
+  color: white;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.regras {
+  margin: 18px 0;
+  background: #fffdf5;
+  border: 2.5px dashed #81c784;
+  border-radius: 12px;
+  width: 90%;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2e7d32;
+  line-height: 1.4;
+}
+
+#startBtn {
+  background: #3a8a4a;
+  color: white;
+  border: none;
+  width: 85%;
+  padding: 14px 0;
+  font-size: 18px;
+  border-radius: 25px;
+  font-weight: 900;
+  box-shadow: 0 4px 0 #1b5e20;
+}
+
+#avisoFase {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.avisoBox {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 25px;
+  width: 85%;
+  text-align: center;
+}
+
+.avisoBox span {
+  font-size: 70px;
+  display: block;
+}
+
+.avisoBox h2 {
+  color: #1b5e20;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.avisoBox p {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.hidden {
+  display: none !important;
+}
