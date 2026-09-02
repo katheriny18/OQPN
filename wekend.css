@@ -20,6 +20,22 @@ body {
   background-color: #000;
 }
 
+.frase {
+  position: fixed;
+  right: 8%;
+  top: 60%;
+  transform: translateY(-50%);
+  color: white;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.9);
+  max-width: 350px;
+  text-align: right;
+}
+
+
 .voltar {
   position: fixed;
   bottom: 30px;
