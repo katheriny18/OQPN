@@ -391,3 +391,101 @@ body{
   color: #7ac6ff;
   cursor: pointer;
 }
+
+/* section 4 */
+
+#para-sempre{
+  background: #050a14;
+  padding: 140px 20px 100px;
+  text-align:center ;
+  position:relative ;
+  overflow:hidden ;
+}
+
+#para-sempre::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(122,198,255,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+#para-sempre h2{
+  font-family: 'Syne', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #fff;
+  line-height: 0.9;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+#para-sempre h2 span{
+  color: #7ac6ff;
+  text-shadow: 0 0 30px #7ac6ff, 0 0 60px rgba(122,198,255,0.5);
+}
+
+.carta-final{
+  max-width: 700px;
+  margin: 0 auto 70px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(122,198,255,0.2);
+  border-radius: 32px;
+  padding: 60px 45px;
+  backdrop-filter: blur(15px);
+  position: relative;
+}
+
+.carta-final p{
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 1.9;
+  color: #d6e8ff;
+  font-weight: 300;
+}
+
+.assinatura{
+  margin-top: 50px;
+}
+
+.linha-assinatura{
+  width: 80px;
+  height: 2px;
+  background: #7ac6ff;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 10px #7ac6ff;
+}
+
+.assinatura small{
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: #7ac6ff;
+  font-weight: 800;
+  opacity: 0.8;
+}
+
+.btn-final{
+  background: #fff;
+  color: #001a33;
+  border: none;
+  padding: 24px 50px;
+  border-radius: 100px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(255,255,255,0.5), 0 10px 30px rgba(0,0,0,0.3);
+  transition: 0.4s;
+  position: relative;
+}
+
+.btn-final:hover{
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 60px rgba(122,198,255,0.8), 0 15px 40px rgba(0,0,0,0.4);
+  background: #7ac6ff;
+}
