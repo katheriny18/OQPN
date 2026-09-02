@@ -120,163 +120,102 @@
 
 .section3{
   background:#050505;
-  padding:40px 15px;
+  padding:60px 15px;
   display:flex;
   justify-content:center;
+  overflow-x: clip;
 }
 .film{
   width:100%;
-  max-width:680px;
+  max-width:620px;
   background:#0c0c0c;
-  border:2px solid #222;
-  padding:22px 18px 10px 18px;
+  border:1px solid #222;
+  padding:20px 18px;
   position:relative;
-  box-shadow: 0 0 0 12px #0c0c0c, 0 0 0 14px #222;
 }
-/* FUROS DO FILME */
+/* furos laterais */
 .film::before, .film::after{
   content:'';
   position:absolute;
-  top:-2px; bottom:-2px;
-  width:20px;
+  top:0; bottom:0;
+  width:24px;
   background:#050505;
-  z-index:3;
-  background-image: linear-gradient(to bottom, transparent 0 4px, #e8e8e8 4px 18px, transparent 18px 26px);
-  background-size: 100% 26px;
-  background-repeat: repeat-y;
+  background-image: linear-gradient(to bottom, transparent 5px, #ddd 5px 18px, transparent 18px 28px);
+  background-size:100% 28px;
 }
 .film::before{ left:-34px; }
 .film::after{ right:-34px; }
 
 .tag{
   display:inline-block;
-  border:1px solid #333;
+  border:1px solid #2a2a2a;
   color:#ff2a2a;
   font-family:monospace;
   font-size:10px;
-  padding:3px 8px;
-  letter-spacing:1px;
+  padding:4px 10px;
+  margin-bottom:15px;
 }
-.main-title{
-  text-align:center;
-  margin: -10px 0 25px 0;
-  position:relative;
-}
-.main-title::before{
-  content:'';
-  position:absolute;
-  left:10px; top:5px;
-  width:110px; height:110px;
-  background:#7a1216;
-  border-radius:50%;
-  z-index:0;
-}
-.main-title::after{
-  content:'';
-  position:absolute;
-  left:18px; top:15px;
-  width:90px; height:90px;
-  background:url('https://i.ibb.co/6P3HhG0/weeknd-silhouette.png') no-repeat center/contain;
-  filter: brightness(0);
-  z-index:1;
-  opacity:0.9;
-}
+.film-top{ position:relative; display:flex; justify-content:center; }
+
+.main-title{ text-align:center; position:relative; z-index:2; }
 .main-title h2{
-  font-family:'Anton', sans-serif;
-  color:#fff;
-  font-weight:400;
-  letter-spacing:3px;
-  font-size:20px;
-  position:relative; z-index:2;
-  margin:0;
+  font-family:'Anton',sans-serif;
+  color:#fff; font-size:18px; letter-spacing:3px; margin:0; font-weight:400;
 }
 .main-title h1{
-  font-family:'Anton', sans-serif;
-  color:#b51d23;
-  font-size:64px;
-  line-height:0.9;
-  margin:0;
-  position:relative; z-index:2;
-  letter-spacing:2px;
+  font-family:'Anton',sans-serif;
+  color:#b51d23; font-size:68px; line-height:.85; margin:0; letter-spacing:2px;
 }
 .main-title p{
-  font-family:'Caveat', cursive;
-  color:#fff;
-  font-size:22px;
-  margin:0;
-  position:relative; z-index:2;
-  transform:rotate(-3deg);
+  font-family:'Caveat',cursive;
+  color:#fff; font-size:22px; margin-top:2px;
   border-bottom:1px solid #b51d23;
-  display:inline-block;
+  transform:rotate(-2deg); display:inline-block;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap:12px;
+/* bolinha e silhueta - agora centralizado igual da foto */
+.main-title::before{
+  content:''; position:absolute;
+  left:-85px; top:-10px;
+  width:88px; height:88px;
+  background:#7a1216; border-radius:50%; z-index:-1;
 }
-.box{
-  border:1px solid #2a2a2a;
-  padding:10px 12px;
-  min-height:85px;
-}
-.box span{
-  color:#b51d23;
-  font-family:monospace;
-  font-size:10px;
-  letter-spacing:1px;
-}
-.box h3{
-  font-family:'Caveat', cursive;
-  color:#fff;
-  font-size:20px;
-  line-height:1.1;
-  margin:6px 0 0 0;
-  font-weight:500;
-}
+
+.grid{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:25px; }
+.box{ border:1px solid #222; padding:12px; }
+.box span{ color:#b51d23; font-family:monospace; font-size:9px; letter-spacing:1px; }
+.box h3{ font-family:'Caveat',cursive; color:#fff; font-size:19px; line-height:1; margin:6px 0 0 0; font-weight:500; }
 .box.big{ grid-column: span 2; }
-.box.small{ grid-column: span 1; }
 
 .footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  margin-top:22px;
-  padding-top:12px;
-  border-top:1px dashed #2a2a2a;
-  position:relative;
+  margin-top:20px; padding-top:12px;
+  border-top:1px dashed #222;
+  display:flex; justify-content:space-between; align-items:flex-end;
 }
-.barcode{
-  font-family:monospace;
-  font-size:8px;
-  color:#b51d23;
-  letter-spacing:1px;
-  writing-mode: vertical-lr;
-  opacity:0.7;
-}
-.footer p{
-  font-family:'Caveat', cursive;
-  color:#fff;
-  font-size:19px;
-  line-height:1.1;
-  background:#0c0c0c;
-  padding:5px 15px;
-  transform:rotate(-1deg);
-  box-shadow: -8px 0 0 #0c0c0c;
-}
+.barcode{ font-family:monospace; font-size:8px; color:#b51d23; writing-mode:vertical-lr; }
+.footer p{ font-family:'Caveat',cursive; color:#fff; font-size:18px; position:relative; transform:rotate(-1deg); }
 .footer p::before{
-  content:'';
-  position:absolute;
-  left:75px; top:-8px;
-  width:35px; height:18px;
-  background:#c9b896;
-  transform:rotate(-12deg);
-  opacity:0.9;
+  content:''; position:absolute; top:-12px; left:15px;
+  width:32px; height:14px; background:#c9b896; transform:rotate(-10deg);
 }
-.xo{
-  font-family:'Anton', sans-serif;
-  color:#b51d23;
-  font-size:42px;
-  transform:rotate(-12deg);
-}
+.xo{ font-family:'Anton',sans-serif; color:#b51d23; font-size:42px; transform:rotate(-10deg); }
 
+/* FOTO POLAROID COM FITA - adiciona no HTML */
+.photo-tape{
+  position:absolute; right:-5px; top:-15px;
+  width:105px; height:125px; background:#fff; padding:4px 4px 18px 4px;
+  transform:rotate(5deg); box-shadow:0 4px 15px rgba(0,0,0,.6); z-index:4;
+}
+.photo-tape::after{
+  content:''; position:absolute; top:-10px; left:30px;
+  width:40px; height:16px; background:rgba(201,184,150,.9); transform:rotate(-6deg);
+}
+.photo-tape img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+@media(max-width:600px){
+  .film::before,.film::after{ display:none; } /* tira furo no celular pra não bugar */
+  .grid{ grid-template-columns: 1fr 1fr; }
+  .main-title h1{ font-size:52px; }
+  .main-title::before{ left:-65px; width:65px; height:65px; }
+  .photo-tape{ width:85px; height:100px; right:0; }
+}
