@@ -113,3 +113,48 @@
   .caixinhas { grid-template-columns: 1fr; }
   .frase { font-size: 20px; right: 10%; }
 }
+
+.terceira-section{
+  padding: 100px 20px;
+  text-align: center;
+  background: #050a18;
+}
+.terceira-section h2{
+  font-family: 'Syne', sans-serif;
+  font-size: 42px;
+  letter-spacing: 5px;
+  color: white;
+}
+.subtitulo{ color: #aaa; letter-spacing: 2px; margin-bottom: 50px;}
+
+.envelopes-container{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.envelope{
+  background: white;
+  width: 280px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.envelope span{ font-size: 40px; }
+.envelope h3{ font-size: 12px; letter-spacing: 2px; margin-top: 15px; color: #0a1931;}
+.envelope:hover{ transform: translateY(-10px) scale(1.05); box-shadow: 0 0 40px rgba(255,255,255,0.5);}
+
+.carta-escondida{
+  display: none;
+  max-width: 600px;
+  margin: 60px auto 0;
+  background: white;
+  color: #0a1931;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: left;
+  line-height: 1.8;
+  position: relative;
+}
+.fechar{ position: absolute; top: 15px; right: 20px; cursor: pointer; font-weight: bold;}

@@ -59,4 +59,38 @@
   </section>
 
 </body>
+
+  </section>
+
+
+  <!-- section 3 -->
+  <section class="terceira-section">
+    <h2>ABRE QUANDO...</h2>
+    <p class="subtitulo">Clique em um envelope</p>
+
+    <div class="envelopes-container">
+      <div class="envelope" onclick="abrirCarta('saudade')">
+        <span>💌</span>
+        <h3>sentir saudade</h3>
+      </div>
+
+      <div class="envelope" onclick="abrirCarta('triste')">
+        <span>💌</span>
+        <h3>estiver triste</h3>
+      </div>
+
+      <div class="envelope" onclick="abrirCarta('amor')">
+        <span>💌</span>
+        <h3>quiser lembrar o quanto te amo</h3>
+      </div>
+    </div>
+
+    <div id="carta" class="carta-escondida">
+      <span class="fechar" onclick="fecharCarta()">x</span>
+      <p id="texto-carta"></p>
+    </div>
+  </section>
+
+  <script src="cartas.js"></script>
+</body>
 </html>
