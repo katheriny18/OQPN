@@ -49,3 +49,29 @@ body {
   font-style: italic;
   margin-top: 20px;
 }
+
+#capa-aranha {
+  background: #0a0f2c;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+}
+.capa-aranha-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.img-capa-aranha {
+  width: 55%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.texto-capa-aranha h1 {
+  font-size: 70px;
+  line-height: 0.9;
+  color: white;
+}
+.texto-capa-aranha h1 span {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
