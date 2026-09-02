@@ -141,3 +141,28 @@ body {
   line-height: 1.6;
   font-weight: 300;
 }
+
+/* ESPAÇAMENTO ENTRE AS SECTIONS */
+
+section {
+  display: block;
+  width: 100%;
+  padding: 80px 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#a-teia-final, #a-teia-criativa, #a-teia-fotos {
+  min-height: 100vh;
+  margin-top: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* garante que a capa não fique colada */
+#capa, #home, .hero {
+  margin-bottom: 0;
+  padding-bottom: 80px;
+}
