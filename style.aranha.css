@@ -142,27 +142,16 @@ body {
   font-weight: 300;
 }
 
-/* ESPAÇAMENTO ENTRE AS SECTIONS */
 
-section {
-  display: block;
-  width: 100%;
-  padding: 80px 20px;
-  margin: 0;
-  box-sizing: border-box;
+/* SÓ DUAS LINHAS DE ESPAÇO E FUNDO AZUL ESCURO */
+#a-teia-final, #a-teia-criativa {
+  margin-top: 40px !important;
+  padding: 60px 20px !important;
+  background-color: #0a1220 !important;
+  border: none !important;
 }
 
-#a-teia-final, #a-teia-criativa, #a-teia-fotos {
-  min-height: 100vh;
-  margin-top: 0;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  position: relative;
-  z-index: 1;
+section + section {
+  margin-top: 40px !important;
 }
 
-/* garante que a capa não fique colada */
-#capa, #home, .hero {
-  margin-bottom: 0;
-  padding-bottom: 80px;
-}
