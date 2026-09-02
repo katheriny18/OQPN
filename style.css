@@ -23,7 +23,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('fundo.jpeg');
+  background-image: url('img/fundo.jpeg');
   background-position: center 30%;
   background-size: cover;
   background-repeat: no-repeat;
