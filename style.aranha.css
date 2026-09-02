@@ -188,147 +188,176 @@ section + section {
 }
 
 /* ===== TERCEIRA SECTION - O QUE EU VEJO EM VOCÊ ===== */
-#o-que-vejo {
-  background: #080d18;
-  padding: 80px 20px;
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050a14;
+}
+
+#o-que-vejo{
+  background: radial-gradient(120% 60% at 50% 0%, #122a5a 0%, #080d18 55%, #050a14 100%);
+  padding: 100px 20px;
   text-align: center;
-  min-height: 100vh;
 }
 
-#o-que-vejo h2 {
-  font-size: 12px;
-  letter-spacing: 6px;
+#o-que-vejo h2{
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  letter-spacing: 7px;
   color: #7ac6ff;
-  margin-bottom: 50px;
-  font-weight: 400;
+  margin-bottom: 60px;
+  text-shadow: 0 0 20px rgba(122,198,255,.8);
 }
 
-.teia-cards {
+.teia-cards{
   max-width: 400px;
   margin: 0 auto;
-  position: relative;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(122, 198, 255, 0.2);
-  border-radius: 18px;
-  padding: 25px;
+.card{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(122,198,255,.25);
+  border-radius: 20px;
+  padding: 28px 20px;
   margin-bottom: 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  transition: .35s;
 }
 
-.card:hover {
-  background: rgba(122, 198, 255, 0.08);
+.card:hover{
   border-color: #7ac6ff;
-  box-shadow: 0 0 30px rgba(122, 198, 255, 0.3);
-  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(122,198,255,.4);
+  transform: translateY(-5px);
 }
 
-.card span {
-  font-weight: 900;
-  font-size: 18px;
+.card span{
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 19px;
   letter-spacing: 3px;
   color: #fff;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.card p {
-  font-size: 13px;
-  color: #a0c4e8;
-  line-height: 1.5;
+.card p{
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #b9d6f5;
   font-style: italic;
-  margin: 0;
+  font-weight: 300;
 }
 
-.linha-dupla {
+.linha-dupla{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 16px;
 }
 
-.card.destaque {
-  background: rgba(122, 198, 255, 0.12);
-  border-color: #7ac6ff;
+.card.destaque{
+  background: #7ac6ff;
 }
 
-.icone-teia {
+.card.destaque span{
+  color: #001a33;
+}
+
+.card.destaque p{
+  color: #00305c;
+  font-weight: 400;
+}
+
+.icone-teia{
   height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5px 0;
 }
 
-.teia-linha {
+.teia-linha{
   width: 1px;
-  height: 25px;
-  background: linear-gradient(to bottom, transparent, #7ac6ff);
-  opacity: 0.6;
-}
-
-.teia-brilho {
-  width: 6px;
-  height: 6px;
+  height: 28px;
   background: #7ac6ff;
+  opacity: .6;
+}
+
+.teia-brilho{
+  width: 8px;
+  height: 8px;
+  background: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 10px #7ac6ff, 0 0 20px #7ac6ff;
-  animation: pulsar 2s infinite;
+  box-shadow: 0 0 15px #7ac6ff, 0 0 30px #7ac6ff;
+  animation: pulsar 1.8s infinite;
 }
 
-@keyframes pulsar {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.4); }
+@keyframes pulsar{
+  0%,100%{ transform: scale(1); }
+  50%{ transform: scale(1.5); }
 }
 
-.icone-teia small {
+.icone-teia small{
+  font-family: 'Syne', sans-serif;
   font-size: 9px;
   letter-spacing: 4px;
   color: #7ac6ff;
-  margin-top: 6px;
-  opacity: 0.5;
+  margin-top: 8px;
+  opacity: .6;
 }
 
-/* MODAL QUE ABRE AO CLICAR */
-#modal-teia {
+#modal-teia{
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(5, 10, 20, 0.9);
-  backdrop-filter: blur(15px);
+  inset: 0;
+  background: rgba(5,10,20,.92);
+  backdrop-filter: blur(18px);
   z-index: 9999;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
 
-#modal-teia.ativa { display: flex; }
+#modal-teia.ativa{
+  display: flex;
+}
 
-.modal-conteudo {
+.modal-conteudo{
   background: #0f1a2e;
   border: 1px solid #7ac6ff;
-  border-radius: 24px;
+  border-radius: 26px;
   padding: 40px 30px;
   max-width: 380px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 50px rgba(122, 198, 255, 0.4);
-  animation: surgir 0.4s ease;
+  box-shadow: 0 0 60px rgba(122,198,255,.5);
   position: relative;
 }
 
-@keyframes surgir {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+.modal-conteudo h3{
+  font-family: 'Syne', sans-serif;
+  color: #fff;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
 }
 
-.modal-conteudo h3 { color: #fff; letter-spacing: 5px; margin-bottom: 20px; font-size: 20px; }
-.modal-conteudo p { color: #d0e6ff; line-height: 1.8; font-size: 16px; margin: 0; }
-.fechar { position: absolute; top: 12px; right: 18px; font-size: 26px; color: #fff; cursor: pointer; }
+.modal-conteudo p{
+  color: #d6ebff;
+  line-height: 1.8;
+  font-size: 16px;
+}
 
+.fechar{
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  color: #7ac6ff;
+  cursor: pointer;
+}
