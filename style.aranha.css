@@ -57,10 +57,12 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* joga pro lado */
   align-items: center;
-  text-align: center;
+  text-align: left;
+  padding-left: 80px;
 }
+
 
 #capa-aranha-full .sub {
   color: #ffcc00;
