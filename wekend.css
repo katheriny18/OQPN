@@ -308,3 +308,76 @@
   object-fit: cover;
   display: block;
 }
+
+  /* responsidade,final, section 3 */
+
+  /* CELULAR - NAO MUDA O PC */
+@media (max-width: 768px){
+  .section3{
+    min-height: auto;
+    padding: 0;
+  }
+  .film{
+    min-height: auto;
+    padding: 20px 18px;
+    border-left: 18px solid #050505;
+    border-right: 18px solid #050505;
+  }
+  .film::before, .film::after{
+    width: 16px;
+    background-size: 100% 28px;
+    background-image: linear-gradient(to bottom, transparent 5px, #ffffff 5px 16px, transparent 16px 28px);
+  }
+  .main-title h2{
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+  .main-title h1{
+    font-size: 58px;
+  }
+  .main-title p{
+    font-size: 18px;
+  }
+  .photo-tape{
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 20px auto 0 auto;
+    width: 120px;
+    height: 145px;
+    transform: rotate(4deg);
+  }
+  .film-top{
+    flex-direction: column;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 25px;
+  }
+  .box.big{
+    grid-column: span 1;
+  }
+  .box h3{
+    font-size: 20px;
+  }
+  .box p{
+    font-size: 15px;
+  }
+  .footer{
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .footer p{
+    font-size: 17px;
+  }
+  .xo{
+    font-size: 40px;
+    align-self: flex-end;
+  }
+  .tag{
+    font-size: 9px;
+  }
+}
