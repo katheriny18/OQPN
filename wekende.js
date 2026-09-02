@@ -7,13 +7,13 @@ function abrirCarta(tipo){
   const texto = document.getElementById('texto-carta');
   
   if(tipo === 'saudade'){
-    texto.innerHTML = "Se você tá com saudade, fecha os olhos. É o meu abraço te encontrando aí onde você tá. Eu tô com saudade também, e é por isso que eu fiz tudo isso, pra você nunca se sentir longe de mim.";
+    texto.innerHTML = "Se voce ta com saudade, fecha os olhos. E o meu abraco te encontrando ai onde voce ta. Eu to com saudade tambem, e e por isso que eu fiz tudo isso, pra voce nunca se sentir longe de mim.";
   }
   if(tipo === 'triste'){
-    texto.innerHTML = "Ei, olha pra mim (mesmo que só na sua mente). Você é a pessoa mais forte e linda que eu conheço. Respira fundo, isso vai passar e eu vou estar aqui, sempre.";
+    texto.innerHTML = "Ei, olha pra mim (mesmo que so na sua mente). Voce e a pessoa mais forte e linda que eu conheco. Respira fundo, isso vai passar e eu vou estar aqui, sempre.";
   }
   if(tipo === 'amor'){
-    texto.innerHTML = "Você tem dúvida? Então lê de novo tudo que eu escrevi nesse site. Cada linha, cada música, cada detalhe é só pra te provar que eu te amo mais do que ontem.";
+    texto.innerHTML = "Voce tem duvida? Entao le de novo tudo que eu escrevi nesse site. Cada linha, cada musica, cada detalhe e so pra te provar que eu te amo mais do que ontem.";
   }
   
   carta.style.display = 'block';
