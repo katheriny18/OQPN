@@ -83,3 +83,68 @@ body {
   margin-top: 20px;
   font-style: italic;
 }
+
+/* section 2 */
+
+#a-teia {
+  position: relative;
+  background: radial-gradient(circle at center, #0a1931 0%, #020205 70%);
+  background-color: #020205;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 80px 20px;
+}
+
+/* brilho azul sutil da teia */
+#a-teia::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  transform: rotate(15deg);
+  opacity: 0.3;
+}
+
+.conteudo-teia {
+  position: relative;
+  z-index: 2;
+}
+
+#a-teia h2 {
+  font-size: 90px;
+  color: white;
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+#a-teia .legenda {
+  color: #7a9cc6;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  text-transform: lowercase;
+}
+
+#a-teia .texto-teia p {
+  color: #c9d6e8;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+#a-teia .texto-teia p:first-child {
+  font-style: italic;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
