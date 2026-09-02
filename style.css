@@ -409,3 +409,56 @@ body {
   .img-topo-4 { height: 220px; }
 }
 
+.sec-portal {
+  background: linear-gradient(to bottom, #060c1f, #000000);
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.sub-titulo-portal {
+  color: #7de2ff;
+  letter-spacing: 8px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.sec-portal h2 {
+  color: white;
+  font-size: clamp(36px, 7vw, 70px);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 25px;
+}
+
+.sec-portal h2 span {
+  color: #7de2ff;
+}
+
+.texto-portal {
+  color: #94a3b8;
+  max-width: 550px;
+  margin: 0 auto 50px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.btn-aranha {
+  display: inline-block;
+  padding: 20px 45px;
+  background: #ef4444;
+  color: white;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 13px;
+  box-shadow: 0 0 40px rgba(239,68,68,0.5);
+}
+
+.proximo-cap {
+  color: rgba(255,255,255,0.3);
+  font-size: 11px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
